@@ -5,7 +5,7 @@ var app = angular.module('devSocial', ['ngRoute']);
 app.config(['$routeProvider', function($routeProvider){
 
   $routeProvider
-    .when('/', {
+    .when('/login', {
       templateUrl: 'app/js/home/home.html',
       controller: 'homeCtrl'
       // resolve: {
@@ -14,8 +14,11 @@ app.config(['$routeProvider', function($routeProvider){
       //   }
       // }
     })
+    .when('/git', {
+      templateUrl: 'app/js/home/git.html',
+    })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '/login'
     });
 
 }]);
